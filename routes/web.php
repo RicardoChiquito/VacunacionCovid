@@ -17,5 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/agregaUsuario', 'HomeController@x');
+Route::get('/agregaUsuario', 'UsuariosController@agregaUsuario');
+Route::post('/envio', 'UsuariosController@create');
 
