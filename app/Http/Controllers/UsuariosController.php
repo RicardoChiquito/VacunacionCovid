@@ -18,11 +18,6 @@ class UsuariosController extends Controller
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create(Request $request)
     {
 
@@ -94,6 +89,8 @@ class UsuariosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $Usuario = Usuario::find($id);
+        $Usuario->delete();
+        return redirect('muestraUsuario');
     }
 }
