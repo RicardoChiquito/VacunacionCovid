@@ -24,8 +24,6 @@
     <form class="form-register" action="/envio" method="POST" enctype="multipart/form-data">
         @csrf
         <h1> Formulario de Usuario </h1>
-        <h2>Ingresa la CURP:</h2>
-        <input class="controls2" type="text" name="CURP" placeholder="Ingresa la CURP"/><br>
         <h2>Nombre:</h2>
         <input class="controls2" type="text" name="Nombre" placeholder="Ingresa el Nombre"/><br>
         <h2>ApellidoPaterno</h2>
@@ -40,6 +38,8 @@
         <a href="{{url('/')}}">
             <button type="button" class="btn btn-primary btn btn-dark">Regresar</button>
         </a>
+        <a href="{{url('/muestraUsuario')}}">
+        <button type="button" class="btn btn-primary btn btn-dark">Ver Usuarios</button>
     </form>    
   
 </body>

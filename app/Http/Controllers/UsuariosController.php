@@ -13,6 +13,13 @@ class UsuariosController extends Controller
         return view('IngresarDatosU')->with('Usuario',$Usuario);
     }
 
+    public function muestraUsuario()
+    {
+        $Usuario = Usuarios::all();
+        return view('muestraUsuario')->with('Usuario',$Usuario);
+        
+    }
+
     public function index()
     {
         //
@@ -23,7 +30,6 @@ class UsuariosController extends Controller
 
         $Usuario = Usuarios::all();
         $nuevoUsuario = new Usuarios;
-        $nuevoUsuario->CURP = $request->CURP;
         $nuevoUsuario->Nombre = $request->Nombre;
         $nuevoUsuario->ApellidoP = $request->ApellidoP;
         $nuevoUsuario->ApellidoM = $request->ApellidoM;
@@ -66,7 +72,21 @@ class UsuariosController extends Controller
      */
     public function edit($id)
     {
-        //
+        $nuevoUsuario = Usuarios::find($id);
+        return view('edicionUsuario')->with('Usuario',$nuevoUsuario);
+    }
+
+    public function guardaEdicion2(Request $request)
+    {
+        $nuevoUsuario = Usuarios::find($request->id);
+        $nuevoUsuario->Nombre = $request->Nombre;
+        $nuevoUsuario->ApellidoP = $request->ApellidoP;
+        $nuevoUsuario->ApellidoM = $request->ApellidoM;
+        $nuevoUsuario->Direccion = $request->Direccion;
+        $nuevoUsuario->Telefono = $request->Telefono;       
+        $nuevoUsuario->save();
+        
+        return redirect('/muestraUsuario');
     }
 
     /**
@@ -89,7 +109,7 @@ class UsuariosController extends Controller
      */
     public function destroy($id)
     {
-        $Usuario = Usuario::find($id);
+        $Usuario = Usuarios::find($id);
         $Usuario->delete();
         return redirect('muestraUsuario');
     }

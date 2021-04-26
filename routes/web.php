@@ -20,10 +20,10 @@ Route::get('/', function () {
 
 Route::get('/agregaUsuario', 'UsuariosController@agregaUsuario');
 Route::post('/envio', 'UsuariosController@create');
-Route::get('/muestraUsuario', 'UsuarioController@muestraUsuario');
-Route::get('/editar/{id}', 'UsuarioController@edit');
-Route::post('/editar/guardaEdicion', 'UsuarioController@guardaEdicion');
-Route::get('/borrar/{id}', 'UsuarioController@destroy');
+Route::get('/muestraUsuario', 'UsuariosController@muestraUsuario');
+Route::get('/editar2/{id}', 'UsuariosController@edit');
+Route::post('/editar2/guardaEdicion2', 'UsuariosController@guardaEdicion2');
+Route::get('/borrar2/{id}', 'UsuariosController@destroy');
 Route::get('/agregaVacuna', 'VacunaController@agregaVacuna');
 Route::post('/envioV', 'VacunaController@create');
 Route::get('/muestraVacuna', 'VacunaController@muestraVacuna');

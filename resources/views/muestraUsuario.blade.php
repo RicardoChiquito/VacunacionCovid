@@ -39,30 +39,33 @@
              <table class="table table-hover table-dark" >
                 <thead>
                     <tr>
-                        <th>CURP</th>
+                        <th>id</th>
                         <th>Nombre</th>
                         <th>Apellido Paterno</th>
                         <th>Apellido Materno</th>
-                                                
+                        <th>Dirección</th>  
+                        <th>Telefono</th>                      
                         <th>Editar Producto</th>
                         <th>Quitar Producto</th>
                     </tr>  
                 </thead>
                 <tbody>
-                    @foreach($usuario as $Usuario)
+                    @foreach($Usuario as $Usuario)
                     <tr>
-                        <td>{{$Usuario->CURP}}</td>
-                        <!--<td><img src="{{ asset('/storage/images/'.$Vacuna->Foto) }}"  width="180" height="100"></td>-->
-                        <td>{{$Vacuna->Nombre}}</td>
-                        <td>{{$Vacuna->Fecha_Llegada}}</td>
-                        <td><a href="/editar/{{$Vacuna->id}}">Editar</a></td>
-                        <td><a href="/borrar/{{$Vacuna->id}}">Eliminar</a></td>
+                        <td>{{$Usuario->id}}</td>
+                        <td>{{$Usuario->Nombre}}</td>
+                        <td>{{$Usuario->ApellidoP}}</td>
+                        <td>{{$Usuario->ApellidoM}}</td>
+                        <td>{{$Usuario->Direccion}}</td>
+                        <td>{{$Usuario->Telefono}}</td>
+                        <td><a href="/editar2/{{$Usuario->id}}">Editar</a></td>
+                        <td><a href="/borrar2/{{$Usuario->id}}">Eliminar</a></td>
                        
                     </tr> 
                      @endforeach
                 </tbody>
             </table>
-            <a href="{{url('/')}}">
+            <a href="{{url('/agregaUsuario')}}">
                <button type="button" class="btn btn-primary  btn btn-dark" >Regresar</button>
             </a>
             

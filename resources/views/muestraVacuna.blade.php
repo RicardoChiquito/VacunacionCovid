@@ -61,7 +61,7 @@
                      @endforeach
                 </tbody>
             </table>
-            <a href="{{url('/')}}">
+            <a href="{{url('/agregaVacuna')}}">
                <button type="button" class="btn btn-primary  btn btn-dark" >Regresar</button>
             </a>
             
