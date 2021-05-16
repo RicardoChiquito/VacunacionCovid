@@ -14,7 +14,7 @@
     <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><i class="fas fa-shield-virus"></i>Syscov</a>
+            <a class="navbar-brand" href="#"><h5><i class="fas fa-shield-virus"></i>Syscov</h5></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -27,7 +27,7 @@
                 <a class="nav-link" href="#"><i class="fas fa-user-edit"></i> Registro de Usuarios</a>
                 </li>
                 <li class="nav-item dropdown">
-                <a class="nav-link active" href="#"><i class="far fa-edit"></i>Registro de Usuarios</a>
+                <a class="nav-link active" href="#"><i class="far fa-edit"></i>Registro de Vacunas</a>
                 </li>
             </ul>
             </div>
@@ -36,47 +36,34 @@
 
     <div class="containerLeft" style="float: left; width: 30%; height:650px; background-color:rgb(52, 58, 64);">
         <ul class="list-group">
-            <a href="/"  style="color: black;"><li class="list-group-item" style="background-color:white); border-top-right-radius: 25px;border-bottom-right-radius: 25px" aria-current="true"><h4><i class="fas fa-users"></i> Lista de Empleados</h4></li></a>
-            <a href="/" style="color: white;"><li class="list-group-item" style="background-color:rgb(52, 58, 64);"><h4><i class="fas fa-syringe"></i> Lista de Vacunas</h4></li></a>
+            <a href="/" style="color: white;"><li class="list-group-item" style="background-color:rgb(52, 58, 64);"><h4><i class="fas fa-syringe"></i> Lista de Empleados</h4></li></a>
+            <a href="/"  style="color: black;"><li class="list-group-item" style="background-color:white); border-top-right-radius: 25px;border-bottom-right-radius: 25px" aria-current="true"><h4><i class="fas fa-users"></i> Lista de Vacunas</h4></li></a>
         </ul>
     </div>
 
     <div class="containerRight" style="float: right; width: 70%; height:650px;">
-    <h2 style="margin-left: 5%; margin-top: 5%"><i class="fas fa-address-book"></i> Lista de todos los Empleados</h2>
+    <form class="form-register3" action="guardaEdicion2" method="POST" enctype="multipart/form-data">
+        @csrf
+        <input type="hidden" name="id" value="{{$Usuario->id}}">
+        <!--<img src="{{ asset('/storage/images/'.$Usuario->Foto) }}"  width="180" height="100"><br><br>-->
 
-        <div class="tableC" style="">
-        <table class="table table-success table-striped" style="width:90%; margin-left:5%; margin-top:1%; border-radius: 10px; box-shadow: -1px 6px 16px 3px rgba(0,0,0,0.75);
--webkit-box-shadow: -1px 6px 16px 3px rgba(0,0,0,0.75);
--moz-box-shadow: -1px 6px 16px 3px rgba(0,0,0,0.75);">
-            <thead>
-                <tr>
-                    <th>id</th>
-                    <th>Nombre</th>
-                    <th>Apellido Paterno</th>
-                    <th>Apellido Materno</th>
-                    <th>Dirección</th>  
-                    <th>Telefono</th>                      
-                    <th>Editar Empleado</th>
-                    <th>Eliminar Empleado</th>
-                </tr>  
-            </thead>
-                <tbody>
-                @foreach($Usuario as $Usuario)
-                    <tr>
-                        <td>{{$Usuario->id}}</td>
-                        <td>{{$Usuario->Nombre}}</td>
-                        <td>{{$Usuario->ApellidoP}}</td>
-                        <td>{{$Usuario->ApellidoM}}</td>
-                        <td>{{$Usuario->Direccion}}</td>
-                        <td>{{$Usuario->Telefono}}</td>
-                        <td><h6><a href="/editar2/{{$Usuario->id}}" style="color:green;"><i class="far fa-edit"></i> Editar</a></h6></td>
-                        <td><h7><a href="/borrar2/{{$Usuario->id}}" style="color:red;"><i class="far fa-trash-alt"></i>Eliminar</a></h7></td>
-                    </tr> 
-                    @endforeach
-                </tbody>
-        </table>
-        </div>
+            <h4>Nombre</h4>
+            <input class="controls2" type="text" name="Nombre" value="{{$Usuario->Nombre}}"/>
         
+
+            <h4>Apellido Paterno:</h4>
+            <input class="controls2"  type="text" name="ApellidoP" value="{{$Usuario->ApellidoP}}"/>
+            <h4>Apellido Materno:</h4>
+            <input class="controls2"  type="text" name="ApellidoM" value="{{$Usuario->ApellidoM}}"/>
+            <h4>Direccion:</h4>
+            <input class="controls2"  type="text" name="Direccion" value="{{$Usuario->Direccion}}"/>
+            <h4>Telefono:</h4>
+            <input class="controls2"  type="text" name="Telefono" value="{{$Usuario->Telefono}}"/>     
+        <br><br> <button type="submit" class="btn btn-primary btn btn-dark">Editar</button>
+        <a href="{{url('/muestraUsuario')}}">
+            <button type="button" class="btn btn-primary  btn btn-dark" >Regresar</button>
+        </a>
+        </form>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
