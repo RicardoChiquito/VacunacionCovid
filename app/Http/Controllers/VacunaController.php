@@ -112,4 +112,9 @@ class VacunaController extends Controller
         $Vacuna->delete();
         return redirect('muestraVacuna');
     }
+
+    public function grafica()
+    {
+        return view('/ejemplo1');
+    }
 }

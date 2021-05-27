@@ -31,5 +31,19 @@ Route::get('/editar/{id}', 'VacunaController@edit');
 Route::post('/editar/guardaEdicion', 'VacunaController@guardaEdicion');
 Route::get('/borrar/{id}', 'VacunaController@destroy');
 
+Route::get('/graficas', 'VacunaController@grafica');
+
+//Ruta para la asignación de vacunas
+Route::get('/registroVacunados', 'ListaController@vistaRegistro');
+
+Route::post('/conteoVacunado', 'ListaController@create');
+
+Route::get('/muestraVacunados', 'ListaController@muestraVacunados');
+
+
+
+
+
+
 
 
