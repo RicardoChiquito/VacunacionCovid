@@ -31,10 +31,11 @@ Route::get('/editar/{id}', 'VacunaController@edit');
 Route::post('/editar/guardaEdicion', 'VacunaController@guardaEdicion');
 Route::get('/borrar/{id}', 'VacunaController@destroy');
 
-Route::get('/graficas', 'VacunaController@grafica');
+Route::get('/Graficas', function () {return view('usuariosVacunados');});
 
 //Ruta para la asignación de vacunas
-Route::get('/registroVacunados', 'ListaController@vistaRegistro');
+Route::get('/', 'ListaController@vistaRegistro');
+//Route::get('/registroVacunados', 'ListaController@vistaRegistro');
 
 Route::post('/conteoVacunado', 'ListaController@create');
 
