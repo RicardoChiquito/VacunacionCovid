@@ -19,7 +19,7 @@ class ListaController extends Controller
         
         $nuevo->save();
 
-        return redirect('/registroVacunados');
+        return redirect('/muestraVacunados');
     }
 
     public function vistaRegistro()

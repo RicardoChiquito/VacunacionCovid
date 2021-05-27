@@ -14,20 +14,20 @@
     <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><i class="fas fa-shield-virus"></i>Syscov</a>
+            <a class="navbar-brand" href="{{url('/registroVacunados')}}"><i class="fas fa-shield-virus"></i>Syscov</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 58%">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#"><i class="fas fa-home"></i> Inicio</a>
+                <a class="nav-link" aria-current="page" href="{{url('/registroVacunados')}}"><i class="fas fa-home"></i> Inicio</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-user-edit"></i> Registro de Usuarios</a>
+                <a class="nav-link" href="{{url('/agregaUsuario')}}"><i class="fas fa-user-edit"></i> Registro de Usuarios</a>
                 </li>
                 <li class="nav-item dropdown">
-                <a class="nav-link active" href="#"><i class="far fa-edit"></i>Registro de Usuarios</a>
+                <a class="nav-link active" href="{{url('/agregaVacuna')}}"><i class="far fa-edit"></i>Registro de Usuarios</a>
                 </li>
             </ul>
             </div>
@@ -36,8 +36,8 @@
 
     <div class="containerLeft" style="float: left; width: 30%; height:650px; background-color:rgb(52, 58, 64);">
         <ul class="list-group">
-            <a href="/"  style="color: black;"><li class="list-group-item" style="background-color:white); border-top-right-radius: 25px;border-bottom-right-radius: 25px" aria-current="true"><h4><i class="fas fa-users"></i> Lista de Empleados</h4></li></a>
-            <a href="/" style="color: white;"><li class="list-group-item" style="background-color:rgb(52, 58, 64);"><h4><i class="fas fa-syringe"></i> Lista de Vacunas</h4></li></a>
+            <a href="/muestraUsuario"  style="color: black;"><li class="list-group-item" style="background-color:white); border-top-right-radius: 25px;border-bottom-right-radius: 25px" aria-current="true"><h4><i class="fas fa-users"></i> Lista de Empleados</h4></li></a>
+            <a href="/muestraVacuna" style="color: white;"><li class="list-group-item" style="background-color:rgb(52, 58, 64);"><h4><i class="fas fa-syringe"></i> Lista de Vacunas</h4></li></a>
         </ul>
     </div>
 
