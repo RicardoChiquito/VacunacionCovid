@@ -63,8 +63,7 @@
                         <td>{{$Vacunado->Nombre}}</td>
                         <td>{{$Vacunado->Vacuna}}</td>
                         <td>{{$Vacunado->FechaAplicacion}}</td>
-                        <td><h6><a href="/editar2/{{$Vacunado->id}}" style="color:green;"><i class="far fa-edit"></i> Editar</a></h6></td>
-                        <td><h7><a href="/borrar2/{{$Vacunado->id}}" style="color:red;"><i class="far fa-trash-alt"></i>Eliminar</a></h7></td>
+                        <td><h7><a href="/borrar3/{{$Vacunado->id}}" style="color:red;"><i class="far fa-trash-alt"></i>Eliminar</a></h7></td>
                     </tr> 
                     @endforeach
                 </tbody>

@@ -52,7 +52,7 @@
                     <h3><i class="fas fa-pen"></i> Nombre de la Vacuna:</h3>
                     <input class="controls2" type="text" style="width:100%; border-radius:10px; margin-bottom:5%;" name="Nombre" placeholder="Ingresa el Nombre de la vacuna"/><br>
                     <h3><i class="fas fa-calendar-alt"></i> Información de la Vacuna</h3>
-                    <input class="controls2"  type="text" style="width:100%; border-radius:10px;" name="Fecha_Llegada" placeholder="Ingresa fecha de llegada con el formato dd/mm/aaaa"/><br>
+                    <input class="controls2"  type="date" style="width:100%; border-radius:10px;" name="Fecha_Llegada" placeholder="Ingresa fecha de llegada con el formato dd/mm/aaaa"/><br>
                     
                     <div class="buttomn" style ="margin-top: 5%">
                         <div class="row">

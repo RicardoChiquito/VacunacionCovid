@@ -41,6 +41,8 @@ Route::post('/conteoVacunado', 'ListaController@create');
 
 Route::get('/muestraVacunados', 'ListaController@muestraVacunados');
 
+Route::get('/borrar3/{id}', 'ListaController@destroy');
+
 
 
 

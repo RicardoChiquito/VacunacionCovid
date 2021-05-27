@@ -74,7 +74,7 @@
                       <h4>Nombre</h4>
                         <input class="controls2" style="width: 100%;" type="text" name="Nombre" value="{{$Vacuna->Nombre}}"/>
                         <h4>Fecha de Llegada:</h4>
-                        <input class="controls2" style="width: 100%;" type="text" name="Fecha_Llegada" value="{{$Vacuna->Fecha_Llegada}}"/>
+                        <input class="controls2" style="width: 100%;" type="date" name="Fecha_Llegada" value="{{$Vacuna->Fecha_Llegada}}"/>
                         <div class="buttons" style="margin-top: 3%">
                           <div class="row">
                             <div class="col-6" ><button style="width: 100%;" type="submit" class="btn btn-success"><i class="fas fa-check"></i> Editar</button>

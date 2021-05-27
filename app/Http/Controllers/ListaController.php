@@ -40,4 +40,11 @@ class ListaController extends Controller
         $Vacunado = Lista::all();
         return view('/muestraVacunados')->with('Vacunado', $Vacunado);
     }
+
+    public function destroy($id)
+    {
+        $Lista = Lista::find($id);
+        $Lista->delete();
+        return redirect('muestraVacunados');
+    }
 }

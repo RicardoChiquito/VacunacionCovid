@@ -69,7 +69,7 @@
                     <div class="col-3">
                         <div class="form-group">
                             <label class="col-form-label">Fecha de Aplicación</label>
-                            <input type="text" name="FechaAplicacion" placeholder="Inserte fecha de aplicación dd/mm/aaaa" id="">
+                            <input type="date" name="FechaAplicacion" placeholder="Inserte fecha de aplicación dd/mm/aaaa" id="">
                         </div>
                     </div>
 
