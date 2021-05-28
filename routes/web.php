@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsuariosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,10 +32,15 @@ Route::get('/editar/{id}', 'VacunaController@edit');
 Route::post('/editar/guardaEdicion', 'VacunaController@guardaEdicion');
 Route::get('/borrar/{id}', 'VacunaController@destroy');
 
-Route::get('/Graficas', function () {return view('usuariosVacunados');});
+//Graficas
+//Route::get('/Graficas', function () {return view('usuariosVacunados');});
+//Route::get('/Graficas/{project_id?}/graph.php','UsuariosController@graph');
+//Route::get('/Graficas/{project_id?}/graph.php', [imprimirController::class, 'graph'])->name('graph');
+Route::get('/Graficas/{project_id?}/graph.php', [UsuariosController::class, 'graph'])->name('graph');
 
 //Ruta para la asignación de vacunas
 Route::get('/', 'ListaController@vistaRegistro');
+
 //Route::get('/registroVacunados', 'ListaController@vistaRegistro');
 
 Route::post('/conteoVacunado', 'ListaController@create');

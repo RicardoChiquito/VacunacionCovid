@@ -59,6 +59,7 @@
                         <div class="form-group">
                             <label class="col-form-label">Nombre Vacuna</label>
                             <select class="form-control" name="Vacuna" id="exampleFormControlSelect1">
+                                <option name="Vacuna" value="Sin Vacuna"> Sin Vacuna </option>
                                 @foreach($Vacuna as $u)
                                 <option name="Vacuna"> {{ $u->Nombre }} </option>
                                 @endforeach
@@ -72,6 +73,17 @@
                             <input type="date" name="FechaAplicacion" placeholder="Inserte fecha de aplicación dd/mm/aaaa" id="">
                         </div>
                     </div>
+
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label class="col-form-label">Desea Vacunarse?</label>
+                            <select class="form-control" name="Decision" id="exampleFormControlSelect1">
+                                <option name="Decision" value="1"> Si desea vacunarse </option>
+                                <option name="Decision" value="2"> No desea vacunarse </option>
+                            </select>
+                        </div>
+                    </div>
+
 
                     <button type="submit" class="btn btn-info"
                         style="width: 90%; margin-left:5%; margin-bottom: 5%;">Enviar</button>

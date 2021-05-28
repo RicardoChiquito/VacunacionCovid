@@ -16,6 +16,7 @@ class ListaController extends Controller
         $nuevo->Nombre = $request->Nombre;
         $nuevo->Vacuna = $request->Vacuna;
         $nuevo->FechaAplicacion = $request->FechaAplicacion;
+        $nuevo->Decision = $request->Decision;
         
         $nuevo->save();
 
@@ -28,6 +29,8 @@ class ListaController extends Controller
         $Vacuna = Vacuna::all();
         return view('/asignaVacunas')->with('Usuario',$Usuario)->with('Vacuna',$Vacuna);
     }
+
+
 
     public function agregaVacunado()
     {

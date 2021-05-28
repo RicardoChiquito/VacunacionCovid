@@ -54,6 +54,7 @@
                     <th>Nombre del Empleado</th>
                     <th>Vacuna Suministrada</th>
                     <th>Fecha de Aplicación</th>
+                    <th>Decision</th>
                 </tr>  
             </thead>
                 <tbody>
@@ -63,9 +64,11 @@
                         <td>{{$Vacunado->Nombre}}</td>
                         <td>{{$Vacunado->Vacuna}}</td>
                         <td>{{$Vacunado->FechaAplicacion}}</td>
+                        <td>{{$Vacunado->Decision}}</td>
                         <td><h7><a href="/borrar3/{{$Vacunado->id}}" style="color:red;"><i class="far fa-trash-alt"></i>Eliminar</a></h7></td>
                     </tr> 
-                    @endforeach
+                
+                @endforeach
                 </tbody>
         </table>
         </div>
