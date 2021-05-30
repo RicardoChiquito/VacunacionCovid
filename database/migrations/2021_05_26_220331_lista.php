@@ -18,7 +18,7 @@ class Lista extends Migration
             $table->string('Nombre');
             $table->string('Vacuna');
             $table->date('FechaAplicacion');
-            $table->integer('Decision');
+            $table->string('Decision');
             $table->rememberToken();
             $table->timestamps();
         });

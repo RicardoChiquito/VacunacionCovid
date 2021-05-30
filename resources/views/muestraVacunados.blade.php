@@ -43,6 +43,14 @@
 
     <div class="containerRight" style="float: right; width: 70%; height:650px;">
     <h2 style="margin-left: 5%; margin-top: 5%"><i class="fas fa-address-book"></i> Lista de Empleados Vacunados</h2>
+    <div class="row">
+        <div class="col-3" style="margin-left: 5%;">
+            <button type="button" style="width:100%;" class="btn btn-info"><a style="color:white;" href="/regresaController">Ver pdf</a></button>
+        </div>
+        <div class="col-3">
+            <button type="button" style="width:100%;"class="btn btn-warning"><a style="color:white;" href="/descargaPDF">Descarga pdf</a></button>
+        </div>
+    </div>
 
         <div class="tableC" style="">
         <table class="table table-success table-striped" style="width:90%; margin-left:5%; margin-top:1%; border-radius: 10px; box-shadow: -1px 6px 16px 3px rgba(0,0,0,0.75);

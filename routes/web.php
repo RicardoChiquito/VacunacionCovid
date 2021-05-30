@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuariosController;
+use Barryvdh\DomPDF\Facade as PDF;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,8 +50,9 @@ Route::get('/muestraVacunados', 'ListaController@muestraVacunados');
 
 Route::get('/borrar3/{id}', 'ListaController@destroy');
 
+Route::get('/regresaController', 'PDFController@PDFVacunados');
 
-
+Route::get('/descargaPDF', 'PDFController@DescargaPDFVacunados');
 
 
 
