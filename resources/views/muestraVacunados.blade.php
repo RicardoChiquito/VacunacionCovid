@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-    <title>Regsitro de Vacunas</title>
+    <title>Registro de Vacunas</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -49,6 +49,9 @@
         </div>
         <div class="col-3">
             <button type="button" style="width:100%;"class="btn btn-warning"><a style="color:white;" href="/descargaPDF">Descarga pdf</a></button>
+        </div>
+        <div class="col-3">
+            <button type="button" style="width:100%;"class="btn btn-info"><a style="color:white;" href="/Graficas/1/graph.php">Grafica Vacunados</a></button>
         </div>
     </div>
 
