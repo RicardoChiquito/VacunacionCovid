@@ -78,8 +78,8 @@
                         <div class="form-group">
                             <label class="col-form-label">Desea Vacunarse?</label>
                             <select class="form-control" name="Decision" id="exampleFormControlSelect1">
-                                <option name="Decision" value="Si se vacunará"> Si se vacunó </option>
-                                <option name="Decision" value="No se vacunará"> No se vacunó </option>
+                                <option name="Decision" value="1"> Si se vacunó </option>
+                                <option name="Decision" value="2"> No se vacunó </option>
                             </select>
                         </div>
                     </div>
