@@ -128,28 +128,15 @@ class UsuariosController extends Controller
         $graph->SetBox(true);
         $data = array($porcentaje_Vacunados, $porcentaje_NoVacunados);
         $p1   = new Plot\PiePlot($data);
-        $graph->title->Set("Personas Vacunadas: " . $total . "");
+        $graph->title->Set("Personas Vacunadas  (Verde)      No Vacunadas (Rojo)");
         $p1->ShowBorder();
         $p1->SetColor('black');
-        $p1->SetSliceColors(array('#1E90FF', '#2E8B57'));
+        $p1->SetSliceColors(array('#00FF00', '#FF0000'));
 
         $graph->Add($p1);
-        //dd($graph->Stroke());
+        
         $graph->Stroke();
-        /*
-        $graph = new Graph\PieGraph(350, 250);
-        $graph->title->Set("A Simple Pie Plot");
-        $graph->SetBox(true);
-
-        $data = array(40, 21, 17, 14, 23);
-        $p1   = new Plot\PiePlot($data);
-        $p1->ShowBorder();
-        $p1->SetColor('black');
-        $p1->SetSliceColors(array('#1E90FF', '#2E8B57', '#ADFF2F', '#DC143C', '#BA55D3'));
-
-        $graph->Add($p1);
-        $graph->Stroke();
-        return back()->with($graph->Stroke());*/
+        
     }
     
     /**
